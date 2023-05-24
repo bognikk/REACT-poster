@@ -1,6 +1,6 @@
 import classes from "./NewPost.module.scss";
 
-const NewPost = ({ onBodyChange, onAuthorChange }) => {
+const NewPost = ({ onBodyChange, onAuthorChange, onCancel }) => {
 	return (
 		<form className={classes.form}>
 			<p>
@@ -10,6 +10,12 @@ const NewPost = ({ onBodyChange, onAuthorChange }) => {
 			<p>
 				<label htmlFor="name">Your name</label>
 				<input type="text" id="name" required onChange={onAuthorChange} />
+			</p>
+			<p className={classes.actions}>
+				<button type="button" onClick={onCancel}>
+					Cancel
+				</button>
+				<button>Submit</button>
 			</p>
 		</form>
 	);
