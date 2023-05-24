@@ -1,6 +1,9 @@
+import { useState } from "react";
 import classes from "./NewPost.module.scss";
 
 const NewPost = () => {
+	const [enteredBody, setEnteredBody] = useState("");
+
 	const changeBodyHandler = (event) => {
 		console.log(event.target.value);
 	};
